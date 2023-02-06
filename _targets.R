@@ -1,5 +1,6 @@
 library(targets)
 library(tarchetypes) 
+library(usethis)
 
 # Target optiosn
 tar_option_set(

@@ -1,0 +1,15 @@
+PLINK v1.90b6.26 64-bit (2 Apr 2022)
+Options in effect:
+  --file toy
+
+Hostname: SOMINF-8031
+Working directory: /Users/asshah4/projects/afib/plink
+Start time: Tue Sep 13 14:41:15 2022
+
+Random number seed: 1663098075
+98304 MB RAM detected; reserving 49152 MB for main workspace.
+Scanning .ped file... done.
+Performing single-pass .bed write (2 variants, 2 people).
+--file: plink.bed + plink.bim + plink.fam written.
+
+End time: Tue Sep 13 14:41:15 2022

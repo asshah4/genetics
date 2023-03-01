@@ -1,6 +1,7 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-data_loc|stem|d5b032e0f3b9e7fc|4a29cfeee9bb9eb1|9f431d2e8900d535|1827491257|/Users/asshah4/OneDrive - University of Illinois at Chicago/data|t19414.2320876574s|b80e978c460b64b0|129461693552|file|local|vector|||3.847||
+chrom_data|stem|a5d60da555a8ad39|178eee6837a1a335|7b72946cdda88e2c|-1825776137||t19415.0318695881s|ed51c5f67a2877e7|18433229|rds|local|vector|||21.86||
+data_loc|stem|45a399dad9e7e0b0|4a29cfeee9bb9eb1|9f431d2e8900d535|1827491257|/Users/asshah4/OneDrive - University of Illinois at Chicago/data|t19415.0253191745s|64acef1dc4a8e0c5|129646430264|file|local|vector|||3.062||
 find_data_folder|function|ec3afe9e4f45d427|||||||||||||||
 find_project_folder|function|ba2e2dabd4326d85|||||||||||||||
-vcf_data|stem|f93447037ad4ef89|43a94114be51da2c|553f7df82f99c66a|-1393748549||t19414.2483156317s|24a0a71bb527d383|1579012118|rds|local|vector|||605.592|The following INFO key occurred more than once GATKCommandLineIDApplyVQSR|
-vcf_file|stem|da5a78f0f43a584a|b1021e4a9d113565|77b07fb1c4e0a3ee|-1032537800|/Users/asshah4/OneDrive - University of Illinois at Chicago/data/aflubber/genetics/CCDG_Broad_CVD_AF_Darbar_UIC_Cases.vcf|t19414.2203587963s|e7f131712ceb2c58|2230764825|file|local|vector|||0||
+vcf_data|stem|8666c2fa4050333c|43a94114be51da2c|0c36b4f6c90d8d9f|-1393748549||t19415.0315685916s|89bcb96e4c0736fa|182142394|rds|local|vector|||58.194|The following INFO key occurred more than once GATKCommandLineIDApplyVQSR|
+vcf_file|stem|a082d8dac99a134f|6b5973c04df01578|b46bc165240dc0c7|-1032537800|/Users/asshah4/OneDrive - University of Illinois at Chicago/data/aflubber/genetics/afl.vcf.gz|t19415.0253191745s|db058590d11ecea7|184736712|file|local|vector|||0||

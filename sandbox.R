@@ -1,15 +1,27 @@
 # Trim appropraite AFL patients rom the data set
 
+library(tidyverse)
 library(vcfR)
 
-afl_pts <-  
+clinical <-
+  tar_read(flutter_data_tidy, store = "../aflubber/_targets/") |>
+  select(study_id, family_history) |>
+  filter(family_history == 1)
+
+afl_ids <-  
   tar_read(flutter_ids, store = "../aflubber/_targets/") |>
   filter(!is.na(dna_id)) |>
-  filter(str_detect(dna_id, pattern = "UIC"))
+  filter(str_detect(dna_id, pattern = "UIC")) 
 
-ids <- afl_pts$dna_id
+# Find flutter history ids
+ids <-
+  inner_join(afl_ids, clinical, by = "study_id") |>
+  pluck("dna_id")
 
-colnames(vcf_data@gt)
+gen_ids <- colnames(vcf_data@gt)
 
+common_ids <- ids[which(ids %in% gen_ids)]
 
-gt <- extract.gt(vcf_data)
+fp <- file.path(data_loc, "aflubber", "genetics", "afl.vcf.gz")
+
+write.vcf(vcf_data[, c("FORMAT", common_ids)], file = fp)

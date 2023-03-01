@@ -10,7 +10,7 @@ tar_option_set(
     # Statistics
     "tidymodels",
     # Genetics
-    "vcfR"
+    "vcfR", "VariantAnnotation"
   ),
   format = "rds" # default storage format
 )
@@ -23,14 +23,12 @@ tar_source()
 
 # Targets
 list(
-  # VCF data intake
+  # VCF data pipeline
   tar_file(data_loc, find_data_folder()),
   tar_file(
     vcf_file,
-    file.path(data_loc, "aflubber", "genetics", "CCDG_Broad_CVD_AF_Darbar_UIC_Cases.vcf") 
+    file.path(data_loc, "aflubber", "genetics", "afl.vcf.gz") 
   ),
-  tar_target(
-    vcf_data, vcfR::read.vcfR(vcf_file)
-  )
+  tar_target(vcf_data, vcfR::read.vcfR(vcf_file))
   
 )

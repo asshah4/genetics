@@ -9,8 +9,14 @@ tar_option_set(
     "tidyverse",
     # Statistics
     "tidymodels",
-    # Genetics
-    "vcfR", "VariantAnnotation"
+    # CRAN  and BioConductor genetic pipelines
+    "vcfR", 
+    "VariantAnnotation", "VariantTools",
+    "adegenet",
+    # Genetic data 
+    "BSgenome.Hsapiens.UCSC.hg19",
+    "TxDb.Hsapiens.UCSC.hg19.knownGene",
+    "SNPlocs.Hsapiens.dbSNP144.GRCh37"
   ),
   format = "rds" # default storage format
 )
@@ -29,6 +35,9 @@ list(
     vcf_file,
     file.path(data_loc, "aflubber", "genetics", "afl.vcf.gz") 
   ),
-  tar_target(vcf_data, vcfR::read.vcfR(vcf_file))
+  tar_target(vcf_data, vcfR::read.vcfR(vcf_file)),
+  tar_target(genlight_data, vcfR::vcfR2genlight(vcf_data)),
+  
+  tar_quarto(vcf_overview_slides, "R/vcf_overview.qmd")
   
 )

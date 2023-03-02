@@ -1,7 +1,10 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+.Random.seed|object|f8b05fcd24fd8a87|||||||||||||||
 chrom_data|stem|a5d60da555a8ad39|178eee6837a1a335|7b72946cdda88e2c|-1825776137||t19415.0318695881s|ed51c5f67a2877e7|18433229|rds|local|vector|||21.86||
-data_loc|stem|45a399dad9e7e0b0|4a29cfeee9bb9eb1|9f431d2e8900d535|1827491257|/Users/asshah4/OneDrive - University of Illinois at Chicago/data|t19415.0253191745s|64acef1dc4a8e0c5|129646430264|file|local|vector|||3.062||
+data_loc|stem|45a399dad9e7e0b0|4a29cfeee9bb9eb1|9f431d2e8900d535|1827491257|/Users/asshah4/OneDrive - University of Illinois at Chicago/data|t19269.9938773148s|0e097f16d551a674|448|file|local|vector|||3.062||
 find_data_folder|function|ec3afe9e4f45d427|||||||||||||||
 find_project_folder|function|ba2e2dabd4326d85|||||||||||||||
+genlight_data|stem|87cf18d7a03568e7|6b61a2838a0af013|7b72946cdda88e2c|984710099||t19417.9507542397s|70a361f85e4366fa|13605772|rds|local|vector|||25.384|Found 105590 loci with more than two alleles.Objects of class genlight only support loci with two alleles.105590 loci will be omitted from the genlight object.|
+vcf|stem||7b09f9fe425058a0|0c36b4f6c90d8d9f|576651366||t19417.9890358423s||0|rds|local|vector|||0.015||error in evaluating the argument x in selecting a method for function seqinfo internal _hts_rewind failed
 vcf_data|stem|8666c2fa4050333c|43a94114be51da2c|0c36b4f6c90d8d9f|-1393748549||t19415.0315685916s|89bcb96e4c0736fa|182142394|rds|local|vector|||58.194|The following INFO key occurred more than once GATKCommandLineIDApplyVQSR|
 vcf_file|stem|a082d8dac99a134f|6b5973c04df01578|b46bc165240dc0c7|-1032537800|/Users/asshah4/OneDrive - University of Illinois at Chicago/data/aflubber/genetics/afl.vcf.gz|t19415.0253191745s|db058590d11ecea7|184736712|file|local|vector|||0||

@@ -1,0 +1,55 @@
+---
+title: Variant Calling
+subtitle: Arrhythmia Panel Analysis
+date: March 1, 2023
+author: Anish S. Shah, MD, MS
+institute: 
+- University of Illinois at Chicago 
+- Emory University
+format: 
+  pdf:
+    documentclass: article
+    colorlinks: true
+    mainfont: Arial
+    fig-pos: 'H'
+    include-in-header: 
+      text: |
+        \usepackage{float}
+execute: 
+  warning: false
+  echo: false
+---
+
+```{r}
+#| label: setup
+library(vcfR)
+vcf <- tar_read(vcf_data)
+```
+
+## Meta data
+
+```{r}
+vcf
+
+# Head of the meta data
+head(vcf@meta)
+
+queryMETA(vcf)
+
+queryMETA(vcf, element = 'DP')
+```
+
+
+## Fixed region
+
+```{r}
+head(getFIX(vcf))
+```
+
+## Genotype region
+
+```{r}
+vcf@gt[1:6, 1:4]
+```
+
+
